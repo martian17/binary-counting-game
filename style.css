@@ -24,6 +24,7 @@ th{
     font-size:5vw;
     color:#747ce2;
     position:relative;
+    overflow:hidden;
 }
 
 @media screen and (min-width: 500px) {
