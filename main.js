@@ -50,7 +50,7 @@ let registerKeyMapping = function(arr){
     keyMapArray = arr;
 };
 registerKeyMapping(["a","d","s"]);
-let numColor = "#888#fff93a#ff703a#3af6ff#3a77ff#ff3a3a#b33aff#ffcb3a#3aff5b#3affb6#463aff#3af6ff#ff0000#4634dc#34dc8e#ff2121#5721ff#a0ff21".split(/\s*\#\s*/).slice(1).map(c=>"#"+c);
+let numColor = "#ccc#fff93a#ff703a#3af6ff#3a77ff#ff3a3a#b33aff#ffcb3a#3aff5b#3affb6#463aff#3af6ff#ff0000#4634dc#34dc8e#ff2121#5721ff#a0ff21".split(/\s*\#\s*/).slice(1).map(c=>"#"+c);
 
 
 let r2 = oc.add("tr");
@@ -92,8 +92,9 @@ let updateSlot = function(){
         }
     }
 };
-/*
+
 let lives = 3;
+/*
 let livesE = wr.add("div","class:lives");
 let updateLives = function(){
     
@@ -159,6 +160,7 @@ let handleReset = function(silent){
         }
     }
     wr.e.classList.remove("over");
+    lives = 3;
     score = 0;
     cnt = 0;
     offset = 0;
