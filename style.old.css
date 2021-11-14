@@ -1,0 +1,83 @@
+body{
+    margin:0px;
+    font-family:Arial;
+    text-align:center;
+}
+
+.wrapper{
+    width:100%;
+    max-width:500px;
+    margin:0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    background-color:#eee;
+    padding:10px;
+    box-sizing:border-box;
+    font-style: italic;
+    font-weight:900;
+    font-size:5vw;
+    color:#747ce2;
+}
+
+@media screen and (min-width: 500px) {
+    .wrapper{
+        font-size:25px;
+    }
+}
+
+.score{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.score>h1{
+    font-size:1.67em;
+    margin:0px;
+}
+.score>p{
+    margin:0px;
+}
+
+.left, .right, .bottom{
+    font-size:1.67em;
+}
+
+.left, .right{
+    background-color:#bfd;
+    padding-top:34%;
+    padding-bottom:34%;
+}
+
+.left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.right{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.bottom{
+    background-color:#fcc;
+    padding-top:17%;
+    padding-bottom:17%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+.left.pressed, .right.pressed{
+    background-color:#8f8;
+}
+
+.bottom.pressed{
+    background-color:#f88;
+}
+
+.over>.left, .over>.right, .over>.bottom{
+    background-color:#f88;
+}
+
+

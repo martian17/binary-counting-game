@@ -4,14 +4,18 @@ body{
     text-align:center;
 }
 
+table{
+    margin:0 auto;
+}
+
+th{
+    text-align:left;
+}
+
 .wrapper{
     width:100%;
     max-width:500px;
     margin:0px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 10px;
     background-color:#eee;
     padding:10px;
     box-sizing:border-box;
@@ -19,6 +23,7 @@ body{
     font-weight:900;
     font-size:5vw;
     color:#747ce2;
+    position:relative;
 }
 
 @media screen and (min-width: 500px) {
@@ -28,8 +33,7 @@ body{
 }
 
 .score{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    width:100%;
 }
 .score>h1{
     font-size:1.67em;
@@ -39,45 +43,84 @@ body{
     margin:0px;
 }
 
-.left, .right, .bottom{
-    font-size:1.67em;
+.slot{
+    display:inline-block;
+    background-color:#ddd;
+    box-sizing: border-box;
 }
 
-.left, .right{
+.slot>div{
+    width:1em;
+    position:relative;
+    margin:5px;
+    float:left;
+}
+.slot>div>div{
+    padding-top:100%;
+    background-color:#aaa;
+    position:relative;
+}
+.slot>div>div>div{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+}
+
+
+.numpad{
+    overflow:hidden;
+    padding-bottom:5px;
+    text-align:center;
+}
+
+.numpad>div{
+    box-sizing:border-box;
+    position:relative;
+    display:inline-block;
+}
+
+.numpad>div>div{
     background-color:#bfd;
-    padding-top:34%;
-    padding-bottom:34%;
 }
 
-.left{
-    grid-column-start: 1;
-    grid-column-end: 2;
+.numpad>div.pressed>div{
+    background-color:#8f8;
 }
 
-.right{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
 
 .bottom{
     background-color:#fcc;
-    padding-top:17%;
-    padding-bottom:17%;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-
-.left.pressed, .right.pressed{
-    background-color:#8f8;
+    padding:1em;
+    font-size:1em;
+    width: calc(50% - 5px);
+    box-sizing: border-box;
+    float:left;
+    margin-right:10px;
 }
 
 .bottom.pressed{
     background-color:#f88;
 }
 
-.over>.left, .over>.right, .over>.bottom{
+.undo{
+    background-color:#ffc;
+    padding:1em;
+    font-size:1em;
+    width: calc(50% - 5px);
+    box-sizing: border-box;
+    float:left;
+}
+
+.undo.pressed{
+    background-color:#ff8;
+}
+
+.over>.numpad>div>div, .over>.bottom{
     background-color:#f88;
 }
+
+
 
 
